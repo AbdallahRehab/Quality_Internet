@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "734755128570",
+    "project_id": "rento-d36f9",
+    "storage_bucket": "rento-d36f9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734755128570:android:06075060c525b373d37543",
+        "android_client_info": {
+          "package_name": "com.company.rento"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "734755128570-5de66ef91ikl6t7ca1if78r9asrs9u6s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYSI8qDCN8VUyyZx7sevRhTk_pj_LQwGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "734755128570-5de66ef91ikl6t7ca1if78r9asrs9u6s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734755128570:android:0b864aa94c7a6ca9d37543",
+        "android_client_info": {
+          "package_name": "com.example.internet_speed_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "734755128570-5de66ef91ikl6t7ca1if78r9asrs9u6s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYSI8qDCN8VUyyZx7sevRhTk_pj_LQwGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "734755128570-5de66ef91ikl6t7ca1if78r9asrs9u6s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
