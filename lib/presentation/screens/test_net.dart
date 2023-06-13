@@ -50,7 +50,9 @@ class _TestNetState extends State<TestNet> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       context.read<TestNetProvider>().reset();
+      context.read<TestNetProvider>().getMyLocation();
 
+      initPlatformState();
 
       try{
         if (Platform.isAndroid) {
@@ -67,7 +69,6 @@ class _TestNetState extends State<TestNet> {
         };
       }
 
-      initPlatformState();
 
     });
   }
@@ -89,9 +90,8 @@ class _TestNetState extends State<TestNet> {
     try {
       if (Platform.isAndroid) androidInfo = await CarrierInfo.getAndroidInfo();
       if (Platform.isIOS) iosInfo = await CarrierInfo.getIosInfo();
-
-      if (Platform.isAndroid && androidInfo != null) context.read<TestNetProvider>().setTelephonyInfoDisplayName(newValue: androidInfo!.telephonyInfo[0].displayName);
-      if (Platform.isIOS && androidInfo != null)  context.read<TestNetProvider>().setTelephonyInfoDisplayName(newValue: iosInfo!.carrierData[0].carrierName);
+      if (Platform.isAndroid && androidInfo != null && androidInfo!.telephonyInfo.isNotEmpty) context.read<TestNetProvider>().setTelephonyInfoDisplayName(newValue: androidInfo!.telephonyInfo[0].displayName);
+      if (Platform.isIOS && iosInfo != null)  context.read<TestNetProvider>().setTelephonyInfoDisplayName(newValue: iosInfo!.carrierData[0].carrierName);
 
     } catch (e) {
       print(e.toString());
@@ -168,7 +168,7 @@ class _TestNetState extends State<TestNet> {
     return Scaffold(
       // backgroundColor: bgCol,
       appBar: AppBar(
-        title: const Text('InternetSpeedTest'),
+        title: const Text('Spider Net'),
         backgroundColor: Colors.blueAccent,
       ),
       body: Consumer<TestNetProvider>(

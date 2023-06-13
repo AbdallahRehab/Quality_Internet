@@ -31,7 +31,7 @@ class _BottomRetailerCardsState extends State<BottomRetailerCard> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 100.w,
-      height: 160,
+      height: 170,
       child: CarouselSlider(
         carouselController: widget.carousalController,
         options: CarouselOptions(
@@ -66,7 +66,7 @@ class _BottomRetailerCardsState extends State<BottomRetailerCard> {
                   left: 8,
                   right: 8,
                   top: 8,
-                  bottom: 12,
+                  bottom: 8,
                 ),
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -124,7 +124,7 @@ class _BottomRetailerCardsState extends State<BottomRetailerCard> {
       child: Row(
         children: [
           const SizedBox(width: 4),
-          getRetailer(url: url),
+          getTypeConnectionIcon(url: url),
           const SizedBox(width: 8),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -207,10 +207,10 @@ class _BottomRetailerCardsState extends State<BottomRetailerCard> {
     );
   }
 
-  Widget getRetailer({required String url}) {
+  Widget getTypeConnectionIcon({required String url}) {
     return Container(
-      height: 60,
-      width: 60,
+      height: 40,
+      width: 40,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         image: DecorationImage(
