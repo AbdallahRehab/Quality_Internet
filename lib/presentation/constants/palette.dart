@@ -20,8 +20,10 @@ LinearGradient buttonGradient = LinearGradient(
 );
 
 // Text Color
-Color txtCol = Colors.white;
+// Color txtCol = Colors.white;
+Color txtCol = Colors.blueAccent;
 
 // Error Message
 Color errorBg = Colors.red;
-Color errorTxt = Colors.white;
+// Color errorTxt = Colors.white;
+Color errorTxt = Colors.blueAccent;

@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 
 import '../screens/intro_screen.dart';
 import '../screens/map/search_map_page.dart';
+import '../screens/splash_screen.dart';
 import '../screens/test_net.dart';
 
 class AppRoutes {
   // static const initializer = '/';
-  static const introScreen = '/';
+  static const splashScreen = '/';
+  static const introScreen = '/introScreen';
   static const testNet = '/testNet';
   static const geolocatorWidget = '/GeolocatorWidget';
   static const googleMapPage = '/GoogleMapPage';
@@ -22,6 +24,9 @@ class AppRoutes {
 
       case introScreen:
         return MaterialPageRoute(builder: (context) => const IntroScreen());
+
+      case splashScreen:
+        return MaterialPageRoute(builder: (context) => SplashScreen());
 
       default:
         return _errorRoute();

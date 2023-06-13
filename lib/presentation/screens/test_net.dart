@@ -166,7 +166,7 @@ class _TestNetState extends State<TestNet> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgCol,
+      // backgroundColor: bgCol,
       appBar: AppBar(
         title: const Text('InternetSpeedTest'),
         backgroundColor: Colors.blueAccent,
@@ -270,25 +270,33 @@ class _TestNetState extends State<TestNet> {
                         provider.state.isServerSelectionInProgress
                             ? 'Selecting Server...'
                             : 'IP: ${provider.state.ip ?? '--'} | ASP: ${provider.state.asn ?? '--'} ',
-                        style: const TextStyle(color: Colors.white)),
+                        style: const TextStyle(color: Colors.blueAccent)),
                   ),
                   SizedBox(height: 8,),
                   provider.state.typeOfConnection !=null ? Padding(
                     padding: const EdgeInsets.only(bottom: 16.0),
                     child: Text(
                         "Type of Connection :  ${provider.state.typeOfConnection ?? ""}",
-                        style: TextStyle(color: Colors.white)),
+                        style: TextStyle(color: Colors.blueAccent)),
                   ):const SizedBox(),
                   SizedBox(height: 8,),
 
                   provider.state.qualityOfYoutube != null?
                   Text(
                       "Quality of Youtube :  ${provider.state.qualityOfYoutube!.round()}P",
-                      style: const TextStyle(color: Colors.white)):SizedBox(),
+                      style: const TextStyle(color: Colors.blueAccent)):SizedBox(),
                   const SizedBox(height: 8,),
                   if (!provider.state.testInProgress) ...{
                     ElevatedButton(
                       child: const Text('Start Testing'),
+                      style: ButtonStyle(
+                          backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.blueAccent),
+                          fixedSize: MaterialStateProperty.all<Size>(Size(40.w, 6.h)),
+                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0),
+                              ))),
                       onPressed: () async {
                         provider.reset();
                         await internetSpeedTest.startTesting(onStarted: () {
@@ -354,6 +362,14 @@ class _TestNetState extends State<TestNet> {
                   ),
                   ElevatedButton(
                     child: const Text('Go to Map'),
+                    style: ButtonStyle(
+                        backgroundColor:
+                        MaterialStateProperty.all<Color>(Colors.blueAccent),
+                        fixedSize: MaterialStateProperty.all<Size>(Size(40.w, 6.h)),
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0),
+                            ))),
                     onPressed: ()  {
                       // Navigator.of(context)
                       //     .push(MaterialPageRoute(builder: (context) =>  GoogleMapPage()));

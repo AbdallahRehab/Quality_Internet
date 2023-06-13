@@ -2,7 +2,6 @@
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
 
-import '../../../core/enums.dart';
 import 'package:google_maps_cluster_manager/google_maps_cluster_manager.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
@@ -18,7 +17,6 @@ enum LoadingState {
 
 class MapNetState {
   late BuildContext context;
-  ScreenStatus loading = ScreenStatus.init;
 
 
 

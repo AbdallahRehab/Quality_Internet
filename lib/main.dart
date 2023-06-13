@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
                   color: Colors.black,
                 ),
               ),
-              initialRoute: AppRoutes.introScreen,
+              initialRoute: AppRoutes.splashScreen,
               onGenerateRoute: AppRoutes.appRoutes);
         }));
   }

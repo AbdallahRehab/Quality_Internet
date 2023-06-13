@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
 
-import '../../core/enums.dart';
 
 class TestNetState {
   late BuildContext context;
-  ScreenStatus loading = ScreenStatus.init;
 
 
 

@@ -5,7 +5,7 @@ import '../constants/palette.dart';
 
 class ProgressBar {
   LinearPercentIndicator showBar(double displayPer) {
-    return new LinearPercentIndicator(
+    return  LinearPercentIndicator(
       width: 300,
       lineHeight: 24.0,
       percent: displayPer / 100.0,
@@ -13,11 +13,12 @@ class ProgressBar {
         displayPer.toStringAsFixed(1) + "%",
         style: new TextStyle(
           fontSize: 14.0,
-          color: txtCol,
+          // color: txtCol,
         ),
       ),
       linearStrokeCap: LinearStrokeCap.roundAll,
-      backgroundColor: progressBg,
+      // backgroundColor: progressBg,
+      backgroundColor: Colors.grey.shade400,
       progressColor: progressFill,
     );
   }
