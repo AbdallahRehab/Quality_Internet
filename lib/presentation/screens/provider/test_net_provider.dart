@@ -208,24 +208,8 @@ class TestNetProvider extends ChangeNotifier {
 
 
   getMyLocation() async {
-    bool serviceEnabled;
-    PermissionStatus permissionGranted;
-    // await state.location!.requestService();
-    // serviceEnabled = await state.location!.serviceEnabled();
-    // if (!serviceEnabled) {
-    //   serviceEnabled = await state.location!.requestService();
-    //   if (!serviceEnabled) {
-    //     return;
-    //   }
-    // }
-    //
-    // permissionGranted = await state.location!.hasPermission();
-    // if (permissionGranted == PermissionStatus.denied) {
-    //   permissionGranted = await state.location!.requestPermission();
-    //   if (permissionGranted != PermissionStatus.granted) {
-    //     return;
-    //   }
-    // }
+
+
     if (await Geolocator.checkPermission() == LocationPermission.denied) {
       await Geolocator.requestPermission();
     }
