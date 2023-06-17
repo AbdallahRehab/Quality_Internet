@@ -338,6 +338,7 @@ class _TestNetState extends State<TestNet> {
                           provider.onUploadCompleteFun(data);
                         }, onCancel: () {
                           provider.reset();
+                          provider.changeTestInProgress(false);
                         });
 
                         provider.initalConnectivity();
